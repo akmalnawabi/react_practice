@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import Person from './Person/Person'
-import './App.css'
-import UserOutput from './UserOutput/UserOutput';
-import UserInput from './UserInput/UserInput';
+import React, { useState } from "react";
+import Person from "./Person/Person";
+import "./App.css";
+import UserOutput from "./UserOutput/UserOutput";
+import UserInput from "./UserInput/UserInput";
+import Toggle from "./four/Toggle";
 
 function App(props) {
   // const [personState, setPersonState] = useState({
@@ -31,45 +32,59 @@ function App(props) {
   //   })
   // }
 
+  // const [name, setName] = useState({
+  //   persons: [
+  //     { name: "ahmad", age: 22 },
+  //     { name: "akmal", age: 12 },
+  //   ],
+  //   showPerson: false,
+  // });
 
-  const [name, setName] = useState({
-     name: "ahmad" ,
-  });
 
-  const userNameChangeHandler = (e) => {
-    setName({name: e.target.value})
-  }
 
-  
+  // const userNameChangeHandler = (e) => {
+  //   setName({ name: e.target.value });
+  // };
+
   return (
     <>
       {/* 3rd folder  */}
-
-      {/* <Person name={personState.persons[0].name} />
+{/* 
+      <Person name={personState.persons[0].name} />
       <Person
         name={personState.persons[0].name}
         age={personState.persons[0].age}
         click={nameHandler}
       />
       <Person>this is children</Person>
-      <button onClick={() => nameHandler()}>change</button>
-
-      <Person
+      <button onClick={() => userNameChangeHandler()}>change</button>
+      <button togglePerson={togglePerson}>change</button>
+  */}
+      {/* {
+        showPerson === true ? 
+        <div>
+<Person
         name={personState.persons[0].name}
         age={personState.persons[0].age}
         name2={personState.persons[1].name}
         age2={personState.persons[1].age}
         change={changeName}
-      /> */}
+      />
+        </div> : null
+      }  */}
 
       {/* // assignement  */}
 
-
-      <UserInput changed={userNameChangeHandler} 
+      {/* <UserInput changed={userNameChangeHandler} 
       currentName={name.name} />
-      <UserOutput userName={name.name} />
+      <UserOutput userName={name.name} /> */}
+    
+     {/* fourth part  */}
+
+     <Toggle />
+
     </>
   );
 }
 
-export default App
+export default App;
