@@ -3,7 +3,9 @@ import Person from "./Person/Person";
 import "./App.css";
 import UserOutput from "./UserOutput/UserOutput";
 import UserInput from "./UserInput/UserInput";
-import Toggle from "./four/Toggle";
+import Assignment from "./four/Assignment";
+import Validation from "./four/Validation";
+// import Toggle from "./four/Toggle";
 
 function App(props) {
   // const [personState, setPersonState] = useState({
@@ -11,7 +13,9 @@ function App(props) {
   //     { name: "akmal", age: 22 },
   //     { name: "ahamd", age: 21 }
   //   ],
-  //   another: "some value"
+  //   another: "some value",
+  //   showPer: true
+
   // });
 
   // const nameHandler = (e) => {
@@ -40,6 +44,16 @@ function App(props) {
   //   showPerson: false,
   // });
 
+  // if (personState.showPer) {
+  //   personState.persons = (
+  //     <div>
+  //       {personState.persons.map((person) => {
+  //         return
+  //          <Person />
+  //       })}
+  //     </div>
+  //   )
+  // }
 
 
   // const userNameChangeHandler = (e) => {
@@ -49,17 +63,17 @@ function App(props) {
   return (
     <>
       {/* 3rd folder  */}
-{/* 
-      <Person name={personState.persons[0].name} />
+
+      {/* <Person name={personState.persons[0].name} />
       <Person
         name={personState.persons[0].name}
         age={personState.persons[0].age}
         click={nameHandler}
       />
       <Person>this is children</Person>
-      <button onClick={() => userNameChangeHandler()}>change</button>
-      <button togglePerson={togglePerson}>change</button>
-  */}
+      <button onClick={() => userNameChangeHandler()}>change</button> */}
+      {/* <button togglePerson={togglePerson}>change</button> */}
+
       {/* {
         showPerson === true ? 
         <div>
@@ -78,11 +92,13 @@ function App(props) {
       {/* <UserInput changed={userNameChangeHandler} 
       currentName={name.name} />
       <UserOutput userName={name.name} /> */}
-    
-     {/* fourth part  */}
 
-     <Toggle />
+      {/* fourth part  */}
 
+      {/* <Toggle /> */}
+
+      <Assignment />
+      {/* <Validation /> */}
     </>
   );
 }
