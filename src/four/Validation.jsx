@@ -4,7 +4,8 @@ const Validation = (props) => {
   const {inputLength} = props
   return (
     <div>
-        <p>{inputLength}</p>
+      {inputLength > 5 ? "too long" : "too short"}
+      <p>{inputLength}</p>
     </div>
   )
 }

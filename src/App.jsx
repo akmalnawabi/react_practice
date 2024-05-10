@@ -98,7 +98,6 @@ function App(props) {
       {/* <Toggle /> */}
 
       <Assignment />
-      {/* <Validation /> */}
     </>
   );
 }
