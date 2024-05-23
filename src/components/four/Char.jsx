@@ -1,5 +1,4 @@
 import React from 'react'
-import Assignment from './Assignment'
 
 const Char = (props) => {
     const {charectar, clicked} = props

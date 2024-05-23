@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import Person from "./Person/Person";
 import "./App.css";
-import UserOutput from "./UserOutput/UserOutput";
-import UserInput from "./UserInput/UserInput";
-import Assignment from "./four/Assignment";
-import Validation from "./four/Validation";
+import Assignment from "../components/four/Assignment";
+import Validation from "../components/four/Validation";
 // import Toggle from "./four/Toggle";
 
 function App(props) {

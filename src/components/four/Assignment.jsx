@@ -25,12 +25,11 @@ const Assignment = () => {
   });    
   return (
     <div>
-      
       <input type="text" onChange={inputHandler} value={state.userInput} />
       <p>{state.userInput}</p>
       <Validation inputLength={state.userInput.length} />
 
-      <h2>{charList}</h2>
+      {charList}
     </div>
   );
 }
