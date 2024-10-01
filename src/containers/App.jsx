@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Assignment from "../components/four/Assignment";
 import Validation from "../components/four/Validation";
+import Cockpit from "../components/Cockpit/Cockpit";
 // import Toggle from "./four/Toggle";
 
 function App(props) {
@@ -94,6 +95,7 @@ function App(props) {
 
       {/* <Toggle /> */}
 
+      <Cockpit />
       <Assignment />
     </>
   );

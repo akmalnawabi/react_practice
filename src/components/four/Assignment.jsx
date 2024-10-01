@@ -19,9 +19,9 @@ const Assignment = () => {
       setState({userInput: updatedText})
     }
 
-  const charList = state.userInput.split('').map((ch, index) => {
-    return <Char charectar={ch} key={index} 
+  const charList = state.userInput.split('').map((ch, index) => {    return <Char charectar={ch} key={index} 
     clicked={() => deleteHandler(index)}/>;
+
   });    
   return (
     <div>
