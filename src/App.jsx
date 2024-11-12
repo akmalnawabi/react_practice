@@ -1,11 +1,39 @@
 import React, { useState } from "react";
 import "./App.css";
-import Assignment from "../components/four/Assignment";
-import Validation from "../components/four/Validation";
-import Cockpit from "../components/Cockpit/Cockpit";
+// import Assignment from "../components/four/Assignment";
+// import Validation from "../components/four/Validation";
+// import Cockpit from "../components/Cockpit/Cockpit";
 // import Toggle from "./four/Toggle";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import RootLayout from "./layouts/RootLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import FaQ from "./pages/FaQ";
+import Contact from "./pages/Contact";
+import Help from "./pages/Help";
+import CareersLayout from "./layouts/CareersLayout";
+import Careers, { careersLoader } from "./pages/careers/Careers";
+import CarresDetails, { careerDetailsLoader } from "./pages/careers/CarresDetails";
 
 function App(props) {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+
+        <Route path="help" element={<Help />}>
+          <Route path="faq" element={<FaQ />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+
+        <Route path="careers" element={<CareersLayout />}>
+          <Route index element={<Careers />} loader={careersLoader} />
+          <Route path=":id" element={<CarresDetails /> } loader={careerDetailsLoader} />
+        </Route>
+      </Route>
+    )
+  );
   // const [personState, setPersonState] = useState({
   //   persons: [
   //     { name: "akmal", age: 22 },
@@ -60,6 +88,7 @@ function App(props) {
 
   return (
     <>
+      <RouterProvider router={router} />
       {/* 3rd folder  */}
 
       {/* <Person name={personState.persons[0].name} />
@@ -95,8 +124,8 @@ function App(props) {
 
       {/* <Toggle /> */}
 
-      <Cockpit />
-      <Assignment />
+      {/* <Cockpit /> */}
+      {/* <Assignment /> */}
     </>
   );
 }
