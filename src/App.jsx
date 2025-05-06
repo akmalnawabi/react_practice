@@ -14,6 +14,10 @@ import Help from "./pages/Help";
 import CareersLayout from "./layouts/CareersLayout";
 import Careers, { careersLoader } from "./pages/careers/Careers";
 import CarresDetails, { careerDetailsLoader } from "./pages/careers/CarresDetails";
+import UseRef from "./differentPractice/UseRef";
+import UseStatePrc from "./differentPractice/UseStatePrc";
+import UseEffect from "./differentPractice/UseEffect";
+import UseMemo from "./differentPractice/UseMemo";
 
 function App(props) {
   const router = createBrowserRouter(
@@ -89,6 +93,10 @@ function App(props) {
   return (
     <>
       <RouterProvider router={router} />
+      {/* <UseRef /> */}
+      {/* <UseStatePrc /> */}
+      {/* <UseEffect /> */}
+      <UseMemo />
       {/* 3rd folder  */}
 
       {/* <Person name={personState.persons[0].name} />
