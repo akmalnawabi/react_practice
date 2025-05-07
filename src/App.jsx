@@ -18,6 +18,9 @@ import UseRef from "./differentPractice/UseRef";
 import UseStatePrc from "./differentPractice/UseStatePrc";
 import UseEffect from "./differentPractice/UseEffect";
 import UseMemo from "./differentPractice/UseMemo";
+import Profile from "./components/contextExample/Profile";
+import Footer from "./components/contextExample/Footer";
+import UseReducer from "./differentPractice/UseReducer";
 
 function App(props) {
   const router = createBrowserRouter(
@@ -93,10 +96,14 @@ function App(props) {
   return (
     <>
       <RouterProvider router={router} />
+
+      {/* <Profile /> */}
+      {/* <Footer /> */}
+      <UseReducer />
       {/* <UseRef /> */}
       {/* <UseStatePrc /> */}
       {/* <UseEffect /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
       {/* 3rd folder  */}
 
       {/* <Person name={personState.persons[0].name} />
